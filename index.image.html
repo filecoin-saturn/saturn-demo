@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+            gap: 10px; /* Space between images */
+            max-width: 600px; /* Set the maximum width of the container */
+            margin: 0 auto; /* Center the container */
+        }
+
+        .image-container img {
+            max-width: 100%; /* Set the maximum width of the images */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        #image1 {
+            background-color: black;
+        }
+
+        /* Media query for screens smaller than 600px */
+        @media screen and (max-width: 600px) {
+            .image-container {
+                grid-template-columns: 1fr; /* 1 column */
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="image-container">
+        <img id="image1" src="http://ipfs.studio.metaplex.com/ipfs/bafkreifyxdnkixhcqz4agfx6jekd27ib7kwxvhaddbvh4ycj4n22jj5d7y" alt="Image 1" loading="lazy" width="300" height="300">
+        <img id="image2" src="http://ipfs.studio.metaplex.com/ipfs/bafybeihbi7l6dykcxjifw4a377qkjdgmqu6nwkibg4fb4qkgnfi3j2q2iy" alt="Image 2" loading="lazy" width="300" height="300">
+        <img id="image3" src="http://ipfs.studio.metaplex.com/ipfs/bafybeicuc7vfbxzaperdc6ng2c4ufeulyjpfrmwuxhxrm6cfdamp5hpw5i" alt="Image 3" loading="lazy" width="300" height="300">
+        <img id="image4" src="http://ipfs.studio.metaplex.com/ipfs/bafybeicws3vbmwbfbdlbpxf32jdqsbutqncta7dza4ocy5eay4u3zcqobm" alt="Image 4" loading="lazy" width="300" height="300">
+        <img id="image5" src="http://ipfs.studio.metaplex.com/ipfs/bafybeigrbpmdsqaift2qwzy32bjyywkx6nzmn66pjeoaie6egpbktykc6e" alt="Image 5" loading="lazy" width="300" height="300">
+    </div>
+</body>
+
+</html>

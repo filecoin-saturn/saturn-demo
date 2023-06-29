@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .audio-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        #my-audio {
+            height: 30px;
+            width: 60%; /* Set width to 60% */
+            background-color: transparent;
+        }
+        
+        #my-audio.vjs-has-started .vjs-control-bar {
+            display: flex;
+            height: 30px;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        #my-audio .vjs-progress-control {
+            top: 0;
+        }
+        
+        #my-audio .vjs-big-play-button {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="audio-container">
+        <video id="my-audio" class="video-js vjs-default-skin vjs-has-started" controls preload="auto" data-setup='{}'>
+            <source src="/ipfs/QmdjRK1qVDkttMTkpzxXXF349dbV4xUAxrRqQXDq4XhD9A/index.m3u8" type="application/x-mpegURL">
+        </video>
+    </div>
+
+    <script>
+        var player = videojs('my-audio', {
+            controls: true,
+            autoplay: false,
+            preload: 'auto',
+            userActions: {
+                hotkeys: false
+            }
+        });
+    </script>
+</body>
+
+</html>

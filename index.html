@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
-    <!-- Add Saturn script tag here -->
-    <script src="https://saturn.tech/widget.js" async></script>
-  </head>
+<head>
+  <title>Saturn Examples</title>
+  <!-- Add Saturn script tag here -->
+  <script src="https://saturn.tech/widget.js" async></script>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-  <body>
-    <video id="bunny-video" class="video-js vjs-16-9" data-setup='{}' controls>
-    <!-- ADD URL here to fetch CID which gets intercepted by the SW -->
-      <source src="/ipfs/QmS29VtmK7Ax6TMmMwbwqtuKSGRJTLJAmHMW83qGvBBxhV/bunny.m3u8" type="application/x-mpegURL">
-    </video>
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
-  </body>
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #eaeaea;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .button:last-child {
+      margin-right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Saturn Examples</h1>
+  <div class="button-container">
+    <a href="index.audio.hls.html" class="button">Audio</a>
+    <a href="index.video.hls.html" class="button">Video</a>
+    <a href="index.image.html" class="button">Images</a>
+  </div>
+</body>
 
 </html>
