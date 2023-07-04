@@ -1,0 +1,124 @@
+:root {
+  --logo-url: url('https://gateway.ipfs.io/ipfs/QmZSLh1CH64RVWKuq6VnforD6UkfZpb1oooY8YkEr9vtA2');
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  min-height: 100%;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  background-color: rgb(4, 17, 32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(4, 17, 32);
+  padding: 10px 20px;
+  z-index: 2;
+}
+
+.header .logo {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  background-image: var(--logo-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(46, 101, 246);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:last-child {
+  margin-right: 0;
+}
+
+.button:hover {
+  background-color: rgb(46, 101, 246);
+}
+
+.audio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+  position: relative;
+  z-index: 1;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 160px auto 0; /* Adjusted top margin to push the images below the header */
+}
+
+@media screen and (max-width: 600px) {
+  .image-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  max-height: calc(100vh - 200px); /* Adjusted max-height to leave space for the header and buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.image-overlay img {
+  max-width: 150%;
+  max-height: 150%;
+  object-fit: contain;
+  z-index: -1;
+}

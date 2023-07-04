@@ -3,48 +3,25 @@
 
 <head>
   <title>Saturn Examples</title>
-  <!-- Add Saturn script tag here -->
   <script src="https://saturn.tech/widget.js" async></script>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .button-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #eaeaea;
-      color: #333;
-      border: none;
-      border-radius: 5px;
-      margin-right: 10px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .button:last-child {
-      margin-right: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <h1>Saturn Examples</h1>
-  <div class="button-container">
-    <a href="index.audio.hls.html" class="button">Audio</a>
-    <a href="index.video.hls.html" class="button">Video</a>
-    <a href="index.image.html" class="button">Images</a>
+  <div class="background">
+    <header class="header">
+      <div class="logo"></div>
+    </header>
+    <div class="button-container">
+      <div style="margin-left: auto; margin-right: auto;">
+        <a href="index.audio.hls.html" class="button">Audio</a>
+        <a href="index.video.hls.html" class="button">Video</a>
+        <a href="index.image.html" class="button">Images</a>
+      </div>
+      <div class="image-overlay">
+        <img src="https://gateway.ipfs.io/ipfs/QmT7nszGNE9gxZDRfL4Mf7cRHSA61fv4aeayf8JfXXF4BD" alt="Image Overlay">
+      </div>
+    </div>
   </div>
 </body>
 
