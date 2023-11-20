@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Saturn Examples</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+
+<body>
+  <div class="background">
+    <header class="header">
+      <div class="logo">
+        <div class="logo"></div>
+      </div>
+    </header>
+    <div class="audio-container">
+      <audio id="audio1" controls preload="auto" autoplay></audio>
+    </div>
+  </div>
+  <script>
+    var audio1 = document.getElementById('audio1');
+
+    // First Audio
+    if (Hls.isSupported()) {
+      var hls1 = new Hls();
+      hls1.loadSource('/ipfs/QmdjRK1qVDkttMTkpzxXXF349dbV4xUAxrRqQXDq4XhD9A/index.m3u8');
+      hls1.attachMedia(audio1);
+      hls1.on(Hls.Events.MANIFEST_PARSED, function () {
+        audio1.play();
+      });
+    }
+    // For browsers that natively support HLS
+    else if (audio1.canPlayType('application/vnd.apple.mpegURL')) {
+      audio1.src = '/ipfs/QmdjRK1qVDkttMTkpzxXXF349dbV4xUAxrRqQXDq4XhD9A/index.m3u8';
+      audio1.play();
+    }
+  </script>
+</body>
+
+</html>

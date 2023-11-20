@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="background">
+    <header class="header">
+      <div class="logo">
+        <a href="https://saturn.tech"><img src="your-logo.png" alt="Logo"></a>
+      </div>
+    </header>
+    <video id="bunny-video" class="video-js vjs-16-9" data-setup='{}' controls>
+      <!-- ADD URL here to fetch CID which gets intercepted by the SW -->
+      <source src="/ipfs/QmS29VtmK7Ax6TMmMwbwqtuKSGRJTLJAmHMW83qGvBBxhV/bunny.m3u8" type="application/x-mpegURL">
+    </video>
+  </div>
+
+  <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+</body>
+
+</html>
